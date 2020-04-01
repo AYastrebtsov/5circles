@@ -1,0 +1,38 @@
+footer.footer
+  div.background.background--footer-top
+    div.box.box--footer-top
+      include ../contacts/contacts
+      +list({
+        header: 'Найти перевозчика',
+        link1: 'Автомобильные перевозки',
+        link2: 'Воздушные перевозки',
+        link3: 'Ж/Д перевозки',
+        link4: 'Морские перевозки',
+        link5: 'Найти груз',
+      })
+      +list({
+        header: 'О компании',
+        link1: 'О нас',
+        link2: 'Статьи',
+        link3: 'Справочники',
+        link4: 'Продажа и аренда',
+        link5: 'Контакты',
+      })
+      include ../social/social
+  div.background.background--footer-bottom
+    div.box.box--footer-bottom
+      +logo({
+        footer: 'true'
+      })
+      ul.footer__yura
+        li.footer__yura-item
+          a.footer__yura-link(href="#") Пользовательское соглашение
+        li.footer__yura-item
+          a.footer__yura-link(href="#") Правила размещения информации
+        li.footer__yura-item
+          a.footer__yura-link(href="#") Политика конфиденциальности
+      a.footer__team(href="#")
+        svg.footer__ugol
+          use(href="#ugol")
+        svg.footer__name
+          use(href="#team")

@@ -1,0 +1,20 @@
+//- ОБРАЗЕЦ ФОРМЫ
+
+section.form.FORM-ID
+
+  section.form__content
+    h2 Заголовок
+    p И другой различный контент
+    form#FORM-ID
+      input.form__text(type="text" required placeholder="Ваше имя*")
+      input.form__phone(type="tel" required placeholder="Телефон*")
+      input.form__text(type="email" required placeholder="E-mail*")
+      textarea.form__text(required placeholder="Комментарий")
+      button.form__submit(type="submit") Отправить
+    p Нажимая на кнопку “Оставить заявку”, вы подтверждаете свое согласие на обработку пользовательских данных
+      
+  section.form__greetings
+    h2 Спасибо, ваша заявка успешно отправлена.
+  section.form__fail
+    h2 Возникла ошибка, повторите попытку позже.
+    button.form__reset Вернуться к форме

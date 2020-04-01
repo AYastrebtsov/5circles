@@ -1,0 +1,14 @@
+extends ../templates/default
+
+block main
+  div.background.background--sky
+    div.background.background--letters
+      img(src="./assets/images/map.png")
+  div.background.background--introduction
+    div.box
+      include ../blocks/introduction/introduction
+    div.box.box--whiteSlider
+      include ../blocks/whiteSlider/whiteSlider
+    div.box.box--stepsSlider
+      include ../blocks/stepsSlider/stepsSlider
+  include ../blocks/message/message

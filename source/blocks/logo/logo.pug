@@ -1,0 +1,8 @@
+mixin logo(data)
+
+  if data.header
+    a.logo.logo--header(href="#")
+      span.visually-hidden TransHub24
+  else if data.footer
+    a.logo.logo--footer(href="#")
+      span.visually-hidden TransHub24

@@ -1,0 +1,52 @@
+@import 'source/utils/utils.scss';
+
+.logo {
+  display: block;
+  min-width: 104px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('../assets/images/logo-pale.svg');
+  transition: 0.5s;
+  outline: none;
+
+  &:hover,
+  &focus {
+    background-image: url('../assets/images/logo-color.svg');
+  }
+
+  &--header {
+    margin-right: 40px;
+
+    @media(max-width: $phone) {
+      width: 104px;
+      min-width: unset;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      background-image: url('../assets/images/logo-color.svg');
+    }
+    @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+      width: 104px;
+      min-width: unset;
+      margin-top: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      background-image: url('../assets/images/logo-color.svg');
+    }
+  }
+
+  &--footer {
+    width: 85px;
+    height: 33px;
+    background-size: contain;
+
+    @media(max-width: $phone) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

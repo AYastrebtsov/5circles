@@ -1,0 +1,87 @@
+@import 'source/utils/utils.scss';
+
+.footer {
+
+  &__yura {
+    @include zero;
+    display: flex;
+    width: 100%;
+    max-width: 760px;
+    justify-content: space-between;
+
+    @media(max-width: $desktop) {
+      max-width: 100%;
+      margin-bottom: 10px;
+      order: -1;
+    }
+    @media(max-width: $phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__yura-item {
+    list-style: none;
+
+    &:nth-child(2) {
+      margin-right: 10px;
+      margin-left: 10px;
+
+      @media(max-width: $phone) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__yura-link {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-decoration: none;
+    color: $third-color;
+    transition: 0.5s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $second-color;
+    }
+  }
+
+  &__team {
+    display: flex;
+    width: 82px;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+
+      .footer__ugol {
+        transform: rotate(250deg);
+      }
+
+      .footer__name {
+        fill: $second-color;
+      }
+    }
+  }
+
+  &__ugol {
+    width: 21px;
+    height: 21px;
+    transition: 0.5s;
+  }
+
+  &__name {
+    width: 53px;
+    height: 10px;
+    transition: 0.5s;
+    fill: $third-color;
+  }
+}

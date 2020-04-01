@@ -1,0 +1,53 @@
+@import 'source/utils/utils.scss';
+
+.languages {
+  @include zero;
+  min-width: 75px;
+  margin-right: 63px;
+
+  @media(max-width: $phone) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  &__button {
+    border: none;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 17px;
+    color: $transparent;
+    background-color: transparent;
+    transition: 0.5s;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+
+    @media(max-width: $phone) {
+      color: $first-color;
+    }
+    @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+      color: $first-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+
+      @media(max-width: $phone) {
+        color: $fourth-color;
+      }
+      @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+        color: $fourth-color;
+      }
+    }
+
+    &--active {
+      color: $second-color;
+    }
+  }
+}

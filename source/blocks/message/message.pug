@@ -1,0 +1,66 @@
+section.message
+  div.message__overlay
+  section.form.message-z
+    button.message__close
+      span.visually-hidden Закрыть всплывающее окно
+      svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 21 21')
+        defs
+        path(fill='#263B58', d='M16.7668 1.69931L1.69935 16.7667c-.93701.937-1.131183 2.2675-.43198 2.9667.69835.6984 2.02886.5042 2.96587-.4328L19.3006 4.2332c.9371-.93701 1.1312-2.26752.4329-2.96587-.6992-.699208-2.0297-.505035-2.9667.43198z')
+        path(fill='#263B58', d='M19.3009 16.7668L4.23353 1.69935C3.29652.76234 1.96601.568167 1.2668 1.26737c-.698343.69835-.50417 2.02886.43284 2.96587L16.767 19.3006c.9371.9371 2.2676 1.1312 2.9659.4329.6992-.6992.505-2.0297-.432-2.9667z')
+    section.form__content.headerform__content
+      span.headerform__header.headerform__header--message Внимание!
+      p.headerform__post-header.headerform__post-header--message С исходными файлами вы можете ознакомиться <a href="https://github.com/AYastrebtsov/5circles" target="blank">здесь</a>
+      p.headerform__post-header.headerform__post-header--message Использование в коммерческих целях запрещено.
+  script.
+    const body = document.querySelector('body');
+    const form = document.querySelector('.message');
+    const close = form.querySelector('.message__close');
+    close.addEventListener('click', () => {
+      form.remove();
+      body.classList.remove('fixed');
+    }, { once: true });
+  style.
+    .message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Avenir Next Cyr';
+    }
+    .message-z {
+    z-index: 11;
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    }
+    .message__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.7;
+    }
+    .message__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    }

@@ -1,0 +1,60 @@
+@import 'source/utils/utils.scss';
+
+.contacts {
+  @include zero;
+  width: 100%;
+  max-width: 295px;
+
+  @media(max-width: $phone) {
+    text-align: center;
+  }
+
+  &__text {
+    padding-right: 5px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $third-color;
+  }
+
+  &__phone {
+    @include zero;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+    color: $third-color;
+    transition: 0.5s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: $second-color;
+    }
+  }
+
+  &__address {
+    @include zero;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+    color: $third-color;
+  }
+
+  &__terms {
+    @include zero;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+    color: $third-color;
+  }
+}

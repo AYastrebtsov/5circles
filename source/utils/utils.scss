@@ -1,0 +1,18 @@
+/* stylelint-disable */
+@mixin zero {
+  padding: 0;
+  margin: 0;
+}
+
+$main-font: 'Avenir Next Cyr';
+
+$first-color: #004460;
+$second-color: #20AFFF;
+$third-color: #ffffff;
+$fourth-color: #b9b9b9;
+$transparent: rgba(255, 255, 255, 0.5);
+
+$desktop: 1199px;
+$tablet: 959px;
+$phone: 767px;
+/* stylelint-enable */

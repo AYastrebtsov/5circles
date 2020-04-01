@@ -1,0 +1,55 @@
+@import 'source/utils/utils.scss';
+
+.meta {
+  @include zero;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media(max-width: $desktop) {
+    justify-content: center;
+  }
+  @media(max-width: $phone) {
+    flex-direction: column;
+    align-items: center;
+    order: 3;
+  }
+  @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    order: 3;
+  }
+
+  &__item {
+    @include zero;
+    padding-right: 25px;
+    padding-left: 25px;
+    list-style: none;
+
+    @media(max-width: $desktop) {
+      padding-bottom: 5px;
+    }
+  }
+
+  &__link {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 17px;
+    text-decoration: none;
+    color: $transparent;
+    transition: 0.5s;
+    outline: none;
+
+    @media(max-width: $phone) {
+      color: $fourth-color;
+    }
+    @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+      color: $fourth-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+    }
+  }
+}

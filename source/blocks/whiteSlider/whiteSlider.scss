@@ -1,0 +1,268 @@
+@import 'source/utils/utils.scss';
+
+.whiteSlider {
+
+  .swiper-wrapper {
+    margin-bottom: 80px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 40px;
+    height: 14px;
+
+    @media(max-width: $phone) {
+      bottom: 15px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $third-color;
+    background-color: transparent;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+    background-color: $third-color;
+  }
+
+  .swiper-button-next {
+    right: 110px;
+
+    @media(max-width: 1600px) {
+      right: 10px;
+    }
+    @media(max-width: 1300px) {
+      top: unset;
+      right: 40%;
+      bottom: 20px;
+    }
+    @media(max-width: $tablet) {
+      top: 50%;
+      right: 10px;
+      bottom: unset;
+    }
+    @media(max-width: $tablet) {
+      right: 0;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 110px;
+
+    @media(max-width: 1600px) {
+      left: 10px;
+    }
+    @media(max-width: 1300px) {
+      top: unset;
+      bottom: 20px;
+      left: 40%;
+    }
+    @media(max-width: $tablet) {
+      top: 50%;
+      bottom: unset;
+      left: 10px;
+    }
+    @media(max-width: $tablet) {
+      left: 0;
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 85px;
+    color: $fourth-color;
+
+    @media(max-width: 1600px) {
+      font-size: 45px;
+    }
+    @media(max-width: 600px) {
+      font-size: 30px;
+    }
+
+  }
+
+  &__slide {
+    width: 100%;
+    max-width: 1700px;
+    border-radius: 40px;
+    background-color: $third-color;
+    box-shadow: 0 25px 55px rgba(41, 101, 144, 0.45);
+  }
+
+  &__header {
+    @include zero;
+    margin-bottom: 35px;
+    font-family: $main-font;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 60px;
+    color: $first-color;
+
+    @media(max-width: $tablet) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @media(max-width: 600px) {
+      margin-bottom: 20px;
+      font-size: 26px;
+      line-height: 30px;
+    }
+  }
+
+  &__info {
+    @include zero;
+    display: flex;
+    justify-content: space-between;
+
+    @media(max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+    max-width: 755px;
+
+    @media(max-width: $tablet) {
+      max-width: unset;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 100%;
+
+      @media(max-width: $tablet) {
+        display: block;
+        max-width: 755px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__signature {
+    @include zero;
+    margin-top: 30px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $first-color;
+
+    @media(max-width: 600px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__form {
+    display: block;
+    width: 100%;
+    max-width: 310px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-family: $main-font;
+    font-size: 12px;
+    font-weight: 450;
+    line-height: 15px;
+    color: $first-color;
+
+    @media(max-width: $tablet) {
+      margin: 0 auto;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-top: 13px;
+    padding-right: 13px;
+    padding-bottom: 13px;
+    padding-left: 13px;
+    border: 1px solid #eff0f1;
+    border-radius: 3px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $first-color;
+  }
+
+  &__reg {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-right: 13px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    border-radius: 3px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: $second-color;
+    background-color: #eefafe;
+    transition: 0.5s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+      background-color: $first-color;
+    }
+  }
+
+  &__submit {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-right: 13px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    border: none;
+    border-radius: 3px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    color: $third-color;
+    background-color: $second-color;
+    transition: 0.5s;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: $first-color;
+    }
+  }
+
+  &__forget {
+    display: block;
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 17px;
+    text-align: center;
+    text-decoration: none;
+    color: $first-color;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

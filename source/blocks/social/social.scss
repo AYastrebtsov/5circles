@@ -1,0 +1,72 @@
+@import 'source/utils/utils.scss';
+
+.social {
+  @include zero;
+
+  &__header {
+    @include zero;
+    margin-bottom: 25px;
+    font-family: $main-font;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 150%;
+    color: $third-color;
+
+    @media(max-width: $phone) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @include zero;
+    display: flex;
+    max-width: 168px;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+
+    @media(max-width: $tablet) {
+      max-width: unset;
+    }
+    @media(max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    height: 40px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    margin-left: 8px;
+    padding-top: 11px;
+    padding-right: 11px;
+    padding-bottom: 11px;
+    padding-left: 11px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: $third-color;
+    transition: 0.5s;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: $second-color;
+
+      svg {
+        fill: $third-color;
+      }
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: 0.5s;
+      fill: $first-color;
+    }
+  }
+}

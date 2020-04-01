@@ -1,0 +1,215 @@
+@import 'source/utils/utils.scss';
+
+.stepsSlider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media(max-width: $desktop) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @media(max-width: $tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media(max-width: $phone) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @media(max-width: 600px) {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .box {
+    padding-bottom: 70px;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 80px;
+
+    @media(max-width: $phone) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .swiper-container {
+    margin-left: -820px;
+
+    @media(max-width: $desktop) {
+      margin-left: 0;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 0;
+    left: 430px;
+    height: 14px;
+
+    @media(max-width: $desktop) {
+      left: 0;
+    }
+    @media(max-width: $phone) {
+      bottom: 15px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 2px solid $third-color;
+    background-color: transparent;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 14px;
+    height: 14px;
+    background-color: $third-color;
+  }
+
+  .swiper-button-next {
+    right: 10px;
+    width: 35px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../assets/images/arrow.svg');
+
+    @media(max-width: $tablet) {
+      top: unset;
+      right: 40%;
+      bottom: 25px;
+    }
+    @media(max-width: 600px) {
+      right: 35%;
+    }
+  }
+
+  .swiper-button-prev {
+    right: 130px;
+    left: unset;
+    width: 35px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../assets/images/arrow.svg');
+    transform: rotate(180deg);
+
+    @media(max-width: $tablet) {
+      top: unset;
+      right: unset;
+      bottom: 25px;
+      left: 40%;
+    }
+    @media(max-width: 600px) {
+      left: 35%;
+    }
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    display: none;
+  }
+
+  .swiper-slide {
+    top: 20px;
+    transition: 0.5s;
+
+    @media(max-width: 600px) {
+      top: 0;
+    }
+  }
+
+  .swiper-slide-active {
+    top: 0;
+    background-color: $second-color;
+    box-shadow: 0 15px 40px rgba(0, 26, 46, 0.3);
+
+    @media(max-width: 600px) {
+      background-color: $third-color;
+    }
+
+    svg {
+      fill: $third-color;
+
+      @media(max-width: 600px) {
+        fill: $first-color;
+      }
+    }
+
+    .stepsSlider__stage,
+    .stepsSlider__description {
+      color: $third-color;
+
+      @media(max-width: 600px) {
+        color: $first-color;
+      }
+    }
+  }
+
+  &__header {
+    @include zero;
+    max-width: 755px;
+    font-family: $main-font;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 60px;
+    color: $third-color;
+
+    @media(max-width: $tablet) {
+      font-size: 32px;
+      line-height: 36px;
+    }
+    @media(max-width: $phone) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &__slide {
+    min-width: 344px;
+    max-width: 345px;
+    min-height: 345px;
+    padding-top: 35px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+    padding-left: 35px;
+    border-radius: 10px;
+    background-color: $third-color;
+    box-sizing: border-box;
+
+    @media(max-width: $desktop) {
+      min-width: unset;
+      max-width: unset;
+    }
+
+    svg {
+      width: 90px;
+      height: 90px;
+      fill: $first-color;
+    }
+  }
+
+  &__stage {
+    @include zero;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: $main-font;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 51px;
+    color: $first-color;
+    letter-spacing: 0.02em;
+  }
+
+  &__description {
+    @include zero;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $first-color;
+  }
+}

@@ -1,0 +1,65 @@
+@import 'source/utils/utils.scss';
+
+.login {
+  @include zero;
+  display: flex;
+  margin-left: auto;
+  padding-left: 20px;
+
+  @media(max-width: $phone) {
+    margin-bottom: 10px;
+    margin-left: unset;
+    padding-left: 0;
+  }
+  @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+    margin-bottom: 10px;
+    margin-left: unset;
+    padding-left: 0;
+  }
+
+  &__link {
+    font-family: $main-font;
+    font-size: 14px;
+    font-weight: 450;
+    line-height: 17px;
+    text-decoration: none;
+    color: $transparent;
+    transition: 0.5s;
+    outline: none;
+
+    @media(max-width: $phone) {
+      color: $fourth-color;
+    }
+    @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+      color: $fourth-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $third-color;
+    }
+
+
+    &:first-child {
+      position: relative;
+      padding-right: 20px;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        width: 1px;
+        height: 100%;
+        background-color: $transparent;
+        content: '';
+
+        @media(max-width: $phone) {
+          background-color: $fourth-color;
+        }
+        @media(min-aspect-ratio: 17/9) and (min-width: 800px) and (max-width: 900px) {
+          background-color: $fourth-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+header.header
+  include ../burger/burger
+  div.header__line
+    div.box.box--top-header
+      include ../languages/languages
+      include ../meta/meta
+      include ../login/login
+  div.box.box--bottom-header
+    +logo({
+      header: 'true'
+    })
+    include ../navigation/navigation
+    a.header__cargo(href="#") Разместить груз
+
+  div.header__wrapper
+    div.header__mobile
+  div.header__overlay
